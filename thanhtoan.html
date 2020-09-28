@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ty dAT SAU</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <a class="navbar-brand" href="./home.html"><img height=30px; src="data:image/png;base64,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" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="home.html">HOME <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">LOGIN</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="shop.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            SHOP
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="shopyeezy.html">YEEZY</a>
+            <a class="dropdown-item" href="shopjordan.html">JORDAN</a>
+            
+            
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">NEW ON FIRE</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="data:image/png;base64,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" alt="" width="72" height="72">
+      <h2>Checkout form</h2>
+      <p class="lead"></p>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-4 order-md-2 mb-4">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-muted">Your cart</span>
+          <span class="badge badge-secondary badge-pill">3</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Product name</h6>
+              <small class="text-muted">Brief description</small>
+            </div>
+            <span class="text-muted">$12</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Second product</h6>
+              <small class="text-muted">Brief description</small>
+            </div>
+            <span class="text-muted">$8</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Third item</h6>
+              <small class="text-muted">Brief description</small>
+            </div>
+            <span class="text-muted">$5</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-light">
+            <div class="text-success">
+              <h6 class="my-0">Promo code</h6>
+              <small>EXAMPLECODE</small>
+            </div>
+            <span class="text-success">-$5</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Total (USD)</span>
+            <strong>$20</strong>
+          </li>
+        </ul>
+  
+        <form class="card p-2">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Promo code">
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-secondary">Redeem</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-8 order-md-1">
+        <h4 class="mb-3">Billing address</h4>
+        <form class="needs-validation" novalidate="">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="firstName">First name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="lastName">Last name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+          </div>
+  
+          <div class="mb-3">
+            <label for="username">Username</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">@</span>
+              </div>
+              <input type="text" class="form-control" id="username" placeholder="Username" required="">
+              <div class="invalid-feedback" style="width: 100%;">
+                Your username is required.
+              </div>
+            </div>
+          </div>
+  
+          <div class="mb-3">
+            <label for="email">Email <span class="text-muted">(Optional)</span></label>
+            <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            <div class="invalid-feedback">
+              Please enter a valid email address for shipping updates.
+            </div>
+          </div>
+  
+          <div class="mb-3">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
+            <div class="invalid-feedback">
+              Please enter your shipping address.
+            </div>
+          </div>
+  
+          <div class="mb-3">
+            <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+            <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+          </div>
+  
+          <div class="row">
+            <div class="col-md-5 mb-3">
+              <label for="country">Country</label>
+              <select class="custom-select d-block w-100" id="country" required="">
+                <option value="">Choose...</option>
+                <option>United States</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="state">State</label>
+              <select class="custom-select d-block w-100" id="state" required="">
+                <option value="">Choose...</option>
+                <option>California</option>
+              </select>
+              <div class="invalid-feedback">
+                Please provide a valid state.
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="zip">Zip</label>
+              <input type="text" class="form-control" id="zip" placeholder="" required="">
+              <div class="invalid-feedback">
+                Zip code required.
+              </div>
+            </div>
+          </div>
+          <hr class="mb-4">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="same-address">
+            <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="save-info">
+            <label class="custom-control-label" for="save-info">Save this information for next time</label>
+          </div>
+          <hr class="mb-4">
+  
+          <h4 class="mb-3">Payment</h4>
+  
+          <div class="d-block my-3">
+            <div class="custom-control custom-radio">
+              <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
+              <label class="custom-control-label" for="credit">Credit card</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="">
+              <label class="custom-control-label" for="debit">Debit card</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">
+              <label class="custom-control-label" for="paypal">PayPal</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="cc-name">Name on card</label>
+              <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+              <small class="text-muted">Full name as displayed on card</small>
+              <div class="invalid-feedback">
+                Name on card is required
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="cc-number">Credit card number</label>
+              <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+              <div class="invalid-feedback">
+                Credit card number is required
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 mb-3">
+              <label for="cc-expiration">Expiration</label>
+              <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+              <div class="invalid-feedback">
+                Expiration date required
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="cc-cvv">CVV</label>
+              <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+              <div class="invalid-feedback">
+                Security code required
+              </div>
+            </div>
+          </div>
+          <hr class="mb-4">
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+        </form>
+      </div>
+    </div>
+  
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">© 2017-2020 Company Name</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+      </ul>
+    </footer>
+  </div>

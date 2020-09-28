@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ty dAT SAU</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <a class="navbar-brand" href="./home.html"><img height=30px; src="data:image/png;base64,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" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="home.html">HOME <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">LOGIN</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="shop.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            SHOP
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="shopyeezy.html">YEEZY</a>
+            <a class="dropdown-item" href="shopjordan.html">JORDAN</a>
+            
+            
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">NEW ON FIRE</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+
+      <div id="demo" class="carousel slide" data-ride="carousel">
+        <section class="jumbotron text-center">
+            <div class="container">
+              <h1 class="jumbotron-heading">AUTHENTIC SHOPS</h1>
+              <p class="lead text-muted">Daily inspiration from our community.
+                Scroll to discover and shop trending styles.</p>
+              <p>
+                <a href="./home.html" class="btn btn-primary my-2">BACK TO HOME</a>
+                <a href="#" class="btn btn-secondary my-2">LAST SELL</a>
+              </p>
+            </div>
+          </section>
+          <div class="album py-5 bg-light">
+            <div class="container">
+    
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="https://sneakerbardetroit.com/wp-content/uploads/2017/10/nike-air-yeezy-2-solr-red-sneaker-talk.jpg" data-holder-rendered="true">
+                    <div class="card-body">
+                      <p class="card-text">Nike Air Yeezy 2 Solar Red</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                         <a href="./solarred.html"><button type="button" class="btn btn-sm btn-outline-secondary">BUY</button></a>
+                          <a href="./solarred.html"><button type="button" class="btn btn-sm btn-outline-secondary">SELL</button></a>
+                        </div>
+                        <small class="text-muted">RETAIL</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="https://stockx-360.imgix.net//adidas-Yeezy-700-V3-Arzareth/Images/adidas-Yeezy-700-V3-Arzareth/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1599674275&w=1000" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                    <div class="card-body">
+                      <p class="card-text">adidas Yeezy 700 V3 Arzareth</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                         <a href="./yezzy arasel.html"> <button type="button" class="btn btn-sm btn-outline-secondary">BUY </button></a>
+                         <a href="./yezzy arasel.html"> <button type="button" class="btn btn-sm btn-outline-secondary">SELL</button></a>
+                        </div>
+                        <small class="text-muted">UNDER RETAIL</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="https://image.goat.com/crop/500/attachments/product_template_additional_pictures/images/014/507/858/original/195483_01.jpg.jpeg?1536271278" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                    <div class="card-body">
+                      <p class="card-text">Yeezy Boost 700 'Wave Runner'</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <a href="yeezywave.html"><button type="button" class="btn btn-sm btn-outline-secondary">BUY</button></a>
+                          <a href="yeezywave.html"></a> <button type="button" class="btn btn-sm btn-outline-secondary">SELL</button></a>
+                        </div>
+                        <small class="text-muted">RETAIL ++</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="https://image.goat.com/crop/500/attachments/product_template_additional_pictures/images/019/471/970/original/487214_01.jpg.jpeg?1552100472" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                    <div class="card-body">
+                      <p class="card-text">Yeezy Boost 350 V2 'Clay'</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                         <a href="clay.html"> <button type="button" class="btn btn-sm btn-outline-secondary">BUY</button></a>
+                         <a href="clay.html"> <button type="button" class="btn btn-sm btn-outline-secondary">SELL</button></a>
+                        </div>
+                        <small class="text-muted">RETAIL</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="https://image.goat.com/crop/500/attachments/product_template_additional_pictures/images/023/573/818/original/515390_01.jpg.jpeg?1563242459" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                    <div class="card-body">
+                      <p class="card-text">Yeezy Boost 350 V2 ' Non-Reflective'</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                         <a href="reflective.html"> <button type="button" class="btn btn-sm btn-outline-secondary">BUY</button></a>
+                         <a href="reflective.html"> <button type="button" class="btn btn-sm btn-outline-secondary">SELL</button></a>
+                        </div>
+                        <small class="text-muted">RETAIL +</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="https://image.goat.com/crop/500/attachments/product_template_additional_pictures/images/016/928/136/original/155573_01.jpg.jpeg?1544644913" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                    <div class="card-body">
+                      <p class="card-text">Yeezy Boost 350 V2 'Semi Yellow'</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                         <a href="yellow.html" ><button type="button" class="btn btn-sm btn-outline-secondary">BUY</button></a>
+                         <a href="yellow.html" ><button type="button" class="btn btn-sm btn-outline-secondary">SELL</button></a>
+                        </div>
+                        <small class="text-muted">UNDER RETAIL</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="https://stockx-360.imgix.net//adidas-Yeezy-QNTM-BSKTBL/Images/adidas-Yeezy-QNTM-BSKTBL/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1583266041&w=1000" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                    <div class="card-body">
+                      <p class="card-text">Yeezy Quantum 'Quantum'</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">BUY</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">SELL</button>
+                        </div>
+                        <small class="text-muted">UNDER RETAIL</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="https://image.goat.com/crop/500/attachments/product_template_additional_pictures/images/008/491/712/original/67145_01.jpg.jpeg?1513117344" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                    <div class="card-body">
+                      <p class="card-text">Yeezy Boost 350 V2 'Oreo'</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <a href="oreo.html"><button type="button" class="btn btn-sm btn-outline-secondary">BUY</button></a>
+                          <a href="oreo.html"></a>  <button type="button" class="btn btn-sm btn-outline-secondary">SELL</button></a>
+                        </div>
+                        <small class="text-muted">RETAIL ++</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="https://image.goat.com/crop/500/attachments/product_template_additional_pictures/images/039/010/751/original/651749_01.jpg.jpeg?1594227641" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                    <div class="card-body">
+                      <p class="card-text">Yeezy Foam Runner 'Ararat'</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                        <a href="foam.html">  <button type="button" class="btn btn-sm btn-outline-secondary">BUY</button></a>
+                        <a href="foam.html"> <button type="button" class="btn btn-sm btn-outline-secondary">SELL</button></a>
+                        </div>
+                        <small class="text-muted">RETAIL</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+      
+            

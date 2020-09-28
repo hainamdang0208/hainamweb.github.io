@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ty dAT SAU</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <a class="navbar-brand" href="./home.html"><img height=30px; src="data:image/png;base64,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" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="home.html">HOME <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">LOGIN</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="shop.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            SHOP
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="shopyeezy.html">YEEZY</a>
+            <a class="dropdown-item" href="shopjordan.html">JORDAN</a>
+            
+            
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">NEW ON FIRE</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+    
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="https://image.goat.com/crop/500/attachments/product_template_additional_pictures/images/008/491/712/original/67145_01.jpg.jpeg?1513117344" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="https://image.goat.com/crop/500/attachments/product_template_additional_pictures/images/008/491/755/original/67145_04.jpg.jpeg?1513117352" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="https://image.goat.com/crop/500/attachments/product_template_additional_pictures/images/008/491/719/original/67145_06.jpg.jpeg?1513117347" alt="Third slide">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+      
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      
+      </div>
+
+      <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Product Details</h1>
+        <p class="lead">Released on December 17, 2016, the Yeezy Boost 350 V2 ‘Oreo’ features a black Primeknit upper with a white stripe, SPLY 350 branding, and a translucent black midsole housing full-length Boost.</p>
+      </div>
+
+      
+      
+      <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+           <h4 class="my-0 font-weight-normal">BUY USED</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$235 <small class="text-muted"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>PURCHASES & RETURNS</li>
+              <li>DROP OFF</li>
+              <li>FEE POLICY</li>
+              <li>PRIVACY</li>
+            </ul>
+            <a href="thanhtoan.html"> <button type="button" class="btn btn-lg btn-block btn-primary">BUY IT NOW</button></a>
+          </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+             <h4 class="my-0 font-weight-normal">BUY NEW</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$986 <small class="text-muted"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>GOAT CLEAN</li>
+              <li>ASSURANCE OF AUTHENTICITY</li>
+              <li>FEE POLICY</li>
+              <li>CAREERS</li>
+            </ul>
+           <a href="thanhtoan.html"><button type="button" class="btn btn-lg btn-block btn-primary">ON FIRE</button></a>
+          </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+          <h4 class="my-0 font-weight-normal">SELL</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$456 <small class="text-muted"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>ACCESSIBILITY STATEMENT</li>
+              <li>PRODUCT SUGGESTION</li>
+              <li>FAQS</li>
+              <li>ASSURANCE OF AUTHENTICITY</li>
+            </ul>
+            <a href="thanhtoan.html"> <button type="button" class="btn btn-lg btn-block btn-primary">SELL IT</button></a>
+          </div>
+        </div>
+      </div>
+      
+      <footer class="container py-5">
+        <div class="row">
+          <div class="col-12 col-md">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+            <small class="d-block mb-3 text-muted">© 2017-2018</small>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Features</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="#">Cool stuff</a></li>
+              <li><a class="text-muted" href="#">Random feature</a></li>
+              <li><a class="text-muted" href="#">Team feature</a></li>
+              <li><a class="text-muted" href="#">Stuff for developers</a></li>
+              <li><a class="text-muted" href="#">Another one</a></li>
+              <li><a class="text-muted" href="#">Last time</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="#">Resource</a></li>
+              <li><a class="text-muted" href="#">Resource name</a></li>
+              <li><a class="text-muted" href="#">Another resource</a></li>
+              <li><a class="text-muted" href="#">Final resource</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="#">Business</a></li>
+              <li><a class="text-muted" href="#">Education</a></li>
+              <li><a class="text-muted" href="#">Government</a></li>
+              <li><a class="text-muted" href="#">Gaming</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="#">Team</a></li>
+              <li><a class="text-muted" href="#">Locations</a></li>
+              <li><a class="text-muted" href="#">Privacy</a></li>
+              <li><a class="text-muted" href="#">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      
+</body>
+</html>

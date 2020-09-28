@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ty dAT SAU</title>
+  <link rel="stylesheet" href="./style.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <a class="navbar-brand" href="./home.html"><img height=30px; src="data:image/png;base64,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" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="home.html">HOME <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">LOGIN</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="shop.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            SHOP
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="shopyeezy.html">YEEZY</a>
+            <a class="dropdown-item" href="shopjordan.html">JORDAN</a>
+            
+            
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">NEW ON FIRE</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <div id="demo" class="carousel slide" data-ride="carousel">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <img class="first-slide"
+              src="https://stockx-360.imgix.net//adidas-Yeezy-Boost-350-V2-Zyon/Images/adidas-Yeezy-Boost-350-V2-Zyon/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1596134320&w=1000"
+              alt="First slide">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>adidas Yeezy Boost 350 V2 Zyon</h1>
+                <p>Yeezy adds another colorway of its most well-known design with the adidas Yeezy 350 Zyon, now
+                  available on StockX.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item active">
+            <img class="second-slide"
+              src="https://stockx-360.imgix.net//Air-Jordan-1-Retro-High-Bio-Hack/Images/Air-Jordan-1-Retro-High-Bio-Hack/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1599068019&w=1000"
+              alt="Second slide">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Jordan 1 Retro High Tokyo Bio Hack</h1>
+                <p>Condition:New|Ticker: AJ1H-BH|100% Authentic</p>
+                <p><a class="btn btn-lg btn-primary" href="jordan1tokyo.html" role="button">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="third-slide"
+              src="https://stockx-360.imgix.net//Louis-Vuitton-Kanye-West-Jaspers-Grey-Pink-2009_TruView/Images/Louis-Vuitton-Kanye-West-Jaspers-Grey-Pink-2009_TruView/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1598377195&w=1000"
+              alt="Third slide">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Louis Vuitton Jaspers Kanye Patchwork Grey/Pink</h1>
+                <p>Kanye West’s signature Jasper silhouette with Louis Vuitton is named after his acclaimed stylist, Ibn
+                  Jasper.</p>
+                <p><a class="btn btn-lg btn-primary" href="vui.html" role="button">Buy it now</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+
+      <!-- Marketing messaging and featurettes
+        ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row new-product">
+          <div class="col-lg-4">
+            <img class="rounded-circle"
+              src="https://image.goat.com/crop/500/attachments/product_template_additional_pictures/images/033/255/651/original/598472_01.jpg.jpeg?1582568586"
+              alt="Generic placeholder image" width="140" height="140">
+            <h2>Yeezy Quantum 'Quantum'</h2>
+            <p>Buy new -$282</p>
+            <p><a class="btn btn-secondary" href="quantum.html" role="button">View details »</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded-circle"
+              src="https://image.goat.com/crop/500/attachments/product_template_additional_pictures/images/037/235/328/original/569208_01.jpg.jpeg?1590685234"
+              alt="Generic placeholder image" width="140" height="140">
+            <h2>Dior x Air Jordan 1 High ON FIRE</h2>
+            <p>Buy new -$8,534</p>
+            <p><a class="btn btn-secondary" href="dior.html" role="button">View details »</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded-circle"
+              src="https://image.goat.com/crop/500/attachments/product_template_additional_pictures/images/012/219/525/original/335047_01.jpg.jpeg?1527188497"
+              alt="Generic placeholder image" width="140" height="140">
+            <h2>Off-White x Air Jordan 1 Retro High OG 'UNC'</h2>
+            <p>Buy new - %1,600</p>
+            <p><a class="btn btn-secondary" href="off.html" role="button">View details »</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+        
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Essentials For Going Back To Cool<span class="text-muted"></span></h2>
+            <p class="lead">It’s never too early to look ahead, and even though it’s the height of summer we think it’s
+              time to get prepared to go Back to Cool.</p>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
+              style="width: 500px; height: 500px;"
+              src="https://stockx-sneaker-analysis.s3.amazonaws.com/wp-content/uploads/2020/08/FallEssentials_bloghero-594x630.jpg"
+              data-holder-rendered="true">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Back To Cool: How To Furnish Your Dorm Room <span class="text-muted"></span>
+            </h2>
+            <p class="lead">The busy life of a student makes it tough to keep track of all the details, especially if
+              you’re spending what little free time you have up in the clouds. It can be difficult to weed through all
+              your accessories and collective clutter, so it’s important to keep everything organized. If freshness is
+              important to you, this set of jars from Supreme will keep anything you store inside them hermetically
+              sealed, meaning that you’ll impress even your best buds.</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
+              src="https://stockx-sneaker-analysis.s3.amazonaws.com/wp-content/uploads/2020/08/Supreme-Jar-Set-Set-of-2-Clear.jpg"
+              data-holder-rendered="true" style="width: 500px; height: 500px;">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Supreme Camo Logo Skateboard Deck Snow Camo <span class="text-muted"></span>
+            </h2>
+            <p class="lead">A new season means new Supreme, and out of the trio of Camo Logo Skateboard Decks that just
+              dropped we love the greyscale Snow color. You already know that greyscale is perfect for fitting into any
+              room, plus if a skate deck is going to appreciate in value you’ve got to get in early to make sure your
+              investment pays off. Without going all the way to the traditional Box Logo, this deck will show the love
+              you have for the brand, and even though it’s camo, unlike John Cena, you won’t be able to miss it.</p>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
+              src="https://stockx-sneaker-analysis.s3.amazonaws.com/wp-content/uploads/2020/08/Supreme-Camo-Logo-Skateboard-Snow-Camo.jpg"
+              data-holder-rendered="true" style="width: 500px; height: 500px;">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+      </div><!-- /.container -->
+
+
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>© 2017-2018 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+      </footer>
+    </div>
+    </body>
+    </html>
